@@ -1,4 +1,4 @@
-# This script recreates a single run in from the simulation setup.
+# This script recreates a single run from the simulation setup described in the paper.
 # The main function is covVimLyl. 
 #
 # covVimLyl(time,
