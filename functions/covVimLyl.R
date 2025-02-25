@@ -7,7 +7,6 @@ covVimLyl <- function(time,
                              nuisance = list(),
                              tauLearner = "S",
                              folds = 1){
-  #browser()
   require(riskRegression)
   A <- treatment
   treatLabs <- levels(treatment)
