@@ -86,7 +86,8 @@ correctGam <- covVimLyl(time = obsTime, status = delta, treatment = A_fac, confo
                                          comp = list(method = "coxph", form = "x1+x2+x3+A"),
                                          cens = list(method = "coxph", form = "x1"),
                                          prop = list(method = "glm"),
-                                         pseudoReg = list(method = "gam")),
+                                         pseudoRegTau = list(method = "gam"),
+                                         pseudoRegX = list(method = "gam")),
                          tauLearner = "S",
                          folds = 1)
 
@@ -97,7 +98,8 @@ correctGamCF <- covVimLyl(time = obsTime, status = delta, treatment = A_fac, con
                                            comp = list(method = "coxph", form = "x1+x2+x3+A"),
                                            cens = list(method = "coxph", form = "x1"),
                                            prop = list(method = "glm"),
-                                           pseudoReg = list(method = "gam")),
+                                           pseudoRegTau = list(method = "gam"),
+                                           pseudoRegX = list(method = "gam")),
                            tauLearner = "S",
                            folds = 10)
 
@@ -109,7 +111,8 @@ RFRF <- covVimLyl(time = obsTime, status = delta, treatment = A_fac, confounders
                                    comp = list(method = "rfsrc"),
                                    cens = list(method = "rfsrc"),
                                    prop = list(method = "rfsrc"),
-                                   pseudoReg = list(method = "rfsrc")),
+                                   pseudoRegTau = list(method = "rfsrc"),
+                                   pseudoRegX = list(method = "rfsrc")),
                    tauLearner = "S",
                    folds = 1)
 
@@ -120,7 +123,8 @@ RFRFCF <- covVimLyl(time = obsTime, status = delta, treatment = A_fac, confounde
                                      comp = list(method = "rfsrc"),
                                      cens = list(method = "rfsrc"),
                                      prop = list(method = "rfsrc"),
-                                     pseudoReg = list(method = "rfsrc")),
+                                     pseudoRegTau = list(method = "rfsrc"),
+                                     pseudoRegX = list(method = "rfsrc")),
                      tauLearner = "S",
                      folds = 10)
 
